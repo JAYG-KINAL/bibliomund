@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pedidos | BiblioMundo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff9e6;
+    }
+
+    header, footer {
+      background-color: #504908;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #504908;
+    }
+
+    .productos, .carrito {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .producto {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .producto button {
+      background-color: #e38c0b;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .carrito ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .carrito li {
+      margin-bottom: 10px;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .btn-pedido {
+      background-color: #504908;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .producto {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .producto button {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pedidos - BiblioMundo</h1>
+  <p>Arma tu pedido fácilmente</p>
+</header>
+
+<!-- Lista de Productos -->
+<div class="productos">
+  <h2>Productos disponibles</h2>
+  <div class="producto">
+    <span>📘 Cuaderno universitario</span>
+    <span>Q15.00</span>
+    <button onclick="agregarAlCarrito('Cuaderno universitario', 15)">Agregar</button>
+  </div>
+  <div class="producto">
+    <span>✏️ Lápiz HB</span>
+    <span>Q3.00</span>
+    <button onclick="agregarAlCarrito('Lápiz HB', 3)">Agregar</button>
+  </div>
+  <div class="producto">
+    <span>🖊 Bolígrafo azul</span>
+    <span>Q4.50</span>
+    <button onclick="agregarAlCarrito('Bolígrafo azul', 4.5)">Agregar</button>
+  </div>
+  <div class="producto">
+    <span>📚 Libro de lectura</span>
+    <span>Q60.00</span>
+    <button onclick="agregarAlCarrito('Libro de lectura', 60)">Agregar</button>
+  </div>
+</div>
+
+<!-- Carrito -->
+<div class="carrito">
+  <h2>🛒 Tu pedido</h2>
+  <ul id="lista-carrito"></ul>
+  <p class="total">Total: Q<span id="total">0.00</span></p>
+  <a href="#" class="btn-pedido" onclick="realizarPedido()">Enviar Pedido</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 BiblioMundo. Todos los derechos reservados.</p>
+
+</footer>
+
+<script>
+  let carrito = [];
+  let total = 0;
+
+  function agregarAlCarrito(producto, precio) {
+    carrito.push({ producto, precio });
+    actualizarCarrito();
+  }
+
+  function actualizarCarrito() {
+    const lista = document.getElementById("lista-carrito");
+    const totalSpan = document.getElementById("total");
+    lista.innerHTML = "";
+    total = 0;
+
+    carrito.forEach((item, index) => {
+      total += item.precio;
+      const li = document.createElement("li");
+      li.textContent = `${item.producto} - Q${item.precio.toFixed(2)} `;
+      const botonQuitar = document.createElement("button");
+      botonQuitar.textContent = "Eliminar";
+      botonQuitar.style.marginLeft = "10px";
+      botonQuitar.onclick = () => eliminarDelCarrito(index);
+      li.appendChild(botonQuitar);
+      lista.appendChild(li);
+    });
+
+    totalSpan.textContent = total.toFixed(2);
+  }
+
+  function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+  }
+
+  function realizarPedido() {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+    let resumen = carrito.map(item => `${item.producto} - Q${item.precio.toFixed(2)}`).join("\n");
+    resumen += `\n\nTotal: Q${total.toFixed(2)}`;
+    alert("Pedido enviado con éxito:\n" + resumen);
+    carrito = [];
+    actualizarCarrito();
+  }
+</script>
+
+</body>
+<!-- Botón flotante que regresa al inicio -->
+<a href="BiblioMundo.html" class="boton-inicio">🏠 Inicio</a>
+
+<style>
+  .boton-inicio {
+    position: fixed;
+    bottom: 20px;  /* Distancia desde abajo */
+    right: 20px;   /* Distancia desde la derecha */
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    z-index: 999;
+  }
+
+  .boton-inicio:hover {
+    background-color: #004999;
+  }
+</style>
+</html>

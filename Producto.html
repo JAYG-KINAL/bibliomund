@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Útiles Escolares</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafcd8; /* Color de fondo claro de la paleta */
+            color: #504908; /* Color de texto oscuro de la paleta */
+        }
+        .header-bg {
+            background-color: #e38c0b; /* Color naranja de la paleta para el encabezado */
+        }
+        .btn-primary {
+            background-color: #e38c0b; /* Color naranja de la paleta para botones */
+            color: #fafcd8; /* Color de texto claro para botones */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #d17a0a; /* Tono más oscuro al pasar el ratón */
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .footer-bg {
+            background-color: #504908; /* Color oscuro de la paleta para el pie de página */
+            color: #fafcd8; /* Color de texto claro para el pie de página */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <header class="header-bg py-4 shadow-md">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-white">BIBLIOMUNDO</h1>
+            <p class="text-white text-lg md:text-xl mt-2">Tu tienda de útiles escolares</p>
+            <p class="text-white text-lg md:text-xl mt-2"><a href="bibliomundo.html" class="btn-regresar">Inicio</a></p>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h2 class="text-3xl font-bold text-center mb-8">Nuestros Productos</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Producto 1 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Lápices" alt="Lápices de Colores" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Lápices de Colores</h3>
+                <p class="text-sm mb-3">Set de 24 lápices de colores vibrantes, ideales para dibujo y arte.</p>
+                <p class="text-lg font-bold mb-4">Q 45.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Cuaderno" alt="Cuaderno Espiral" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Cuaderno Espiral A4</h3>
+                <p class="text-sm mb-3">Cuaderno de 100 hojas rayadas, perfecto para apuntes y tareas.</p>
+                <p class="text-lg font-bold mb-4">Q 25.50</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Mochila" alt="Mochila Escolar" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Mochila Ergonómica</h3>
+                <p class="text-sm mb-3">Mochila resistente con compartimentos, cómoda para llevar libros.</p>
+                <p class="text-lg font-bold mb-4">Q 180.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Bolígrafos" alt="Set de Bolígrafos" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Bolígrafos Gel</h3>
+                <p class="text-sm mb-3">5 bolígrafos de gel de colores variados para escritura suave.</p>
+                <p class="text-lg font-bold mb-4">Q 35.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Tijeras" alt="Tijeras Escolares" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Tijeras Escolares</h3>
+                <p class="text-sm mb-3">Tijeras de punta roma, seguras para uso infantil y manualidades.</p>
+                <p class="text-lg font-bold mb-4">Q 15.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Pegamento" alt="Barra de Pegamento" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Barra de Pegamento</h3>
+                <p class="text-sm mb-3">Pegamento en barra no tóxico, ideal para proyectos escolares.</p>
+                <p class="text-lg font-bold mb-4">Q 10.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Regla" alt="Regla de 30cm" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Regla Transparente 30cm</h3>
+                <p class="text-sm mb-3">Regla de plástico transparente con medidas claras.</p>
+                <p class="text-lg font-bold mb-4">Q 8.50</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Calculadora" alt="Calculadora Científica" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Calculadora Científica</h3>
+                <p class="text-sm mb-3">Calculadora avanzada para estudiantes de secundaria y universidad.</p>
+                <p class="text-lg font-bold mb-4">Q 120.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 9 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Borradores" alt="Set de Borradores" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Borradores</h3>
+                <p class="text-sm mb-3">3 borradores de nata de alta calidad que no manchan.</p>
+                <p class="text-lg font-bold mb-4">Q 12.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 10 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Sacapuntas" alt="Sacapuntas Doble" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Sacapuntas Doble</h3>
+                <p class="text-sm mb-3">Sacapuntas con doble orificio para lápices de diferentes grosores.</p>
+                <p class="text-lg font-bold mb-4">Q 7.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 11 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Pinturas" alt="Set de Temperas" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Temperas 6 Colores</h3>
+                <p class="text-sm mb-3">Pinturas lavables, ideales para proyectos de arte infantil.</p>
+                <p class="text-lg font-bold mb-4">Q 55.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 12 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Pinceles" alt="Set de Pinceles" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Pinceles Variados</h3>
+                <p class="text-sm mb-3">5 pinceles de diferentes tamaños para diversas técnicas de pintura.</p>
+                <p class="text-lg font-bold mb-4">Q 30.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 13 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Plastilina" alt="Set de Plastilina" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Plastilina 12 Colores</h3>
+                <p class="text-sm mb-3">Plastilina no tóxica y moldeable, para creatividad sin límites.</p>
+                <p class="text-lg font-bold mb-4">Q 20.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 14 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Marcadores" alt="Set de Marcadores" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Set de Marcadores Permanentes</h3>
+                <p class="text-sm mb-3">10 marcadores de punta fina y colores intensos, secado rápido.</p>
+                <p class="text-lg font-bold mb-4">Q 40.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+
+            <!-- Producto 15 -->
+            <div class="product-card p-4 flex flex-col items-center text-center">
+                <img src="https://placehold.co/200x200/fafcd8/504908?text=Cartulina" alt="Paquete de Cartulinas" class="w-48 h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mb-2">Paquete de Cartulinas A3</h3>
+                <p class="text-sm mb-3">10 hojas de cartulina de colores surtidos, ideal para proyectos.</p>
+                <p class="text-lg font-bold mb-4">Q 30.00</p>
+                <button class="btn-primary px-6 py-2 rounded-full font-semibold text-sm md:text-base">Comprar ahora</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bg py-4 text-center text-sm">
+        <p>Javier Alejandro Pérez Alvarado, 2023033 (Página de Productos)</p>
+    </footer>
+</body>
+<!-- Botón flotante que regresa al inicio -->
+<a href="BiblioMundo.html" class="boton-inicio">🏠 Inicio</a>
+
+<style>
+  .boton-inicio {
+    position: fixed;
+    bottom: 20px;  /* Distancia desde abajo */
+    right: 20px;   /* Distancia desde la derecha */
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    z-index: 999;
+  }
+
+  .boton-inicio:hover {
+    background-color: #004999;
+  }
+</style>
+</html>

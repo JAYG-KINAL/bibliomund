@@ -1,0 +1,88 @@
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: Arial;
+	background-color: #fafcd8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+}
+
+form {
+	background-color: #504908;
+	padding: 50px;
+	box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 420px;
+
+}
+
+form h2 {
+	font-size: 30px;
+	color: #e38c0b;
+	margin-bottom: 30px;
+}
+
+input {
+	padding: 17px;
+	border: 0;
+	background-color: #2A2A32;
+	margin-bottom: 25px;
+	color: #CDCBD2;
+	outline: none;
+	font-size: 15px;
+	border-radius: 10px;
+}
+
+::placeholder {
+	color: #CDCBD2;
+}
+
+.btn {
+	background-color: #e38c0b;
+	color: #fafcd8;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #38FFC3;
+}
+
+@media(max-width:991px) {
+	body {
+		padding: 30px;
+	}
+
+	form {
+		width: 340px;
+	}
+}
+
+.btn-regresar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+}
+
+    .btn-regresar:hover {
+      background-color: #0056b3;
+}
